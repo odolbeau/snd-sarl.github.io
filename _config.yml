@@ -1,0 +1,18 @@
+safe: true
+lsi: false
+permalink:  /:title.html
+markdown: kramdown
+
+url: http://snd-sarl.fr
+
+exclude: [vendor]
+
+# Blog
+author:
+    name: Roger Dolbeau
+    email: r.dolbeau.snd@gmail.com
+title: SND
+description: Mécanique générale et de précision
+
+google_analytics:
+    account: UA-57990384-1

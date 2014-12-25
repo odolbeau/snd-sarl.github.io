@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <title>{{ page.title }}</title>
+
+        <meta name="author" content="{{ site.author.name }}" />
+        <meta name="description" content="{{ page.description }} - {{ site.author.name }}" />
+        <meta name="keywords" content="{{ page.keywords }}" />
+
+        <link rel="stylesheet" type="text/css" href="/assets/css/base.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="/assets/css/alerts.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.min.css" media="all" />
+
+        <!-- Allow html5 elements to be style properly for IE v8 and before -->
+        <!--[if lt IE9]><script src="/js/html5-ie.js"></script><![endif]-->
+
+        {% if site.google_analytics %}
+            <script type="text/javascript">
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', '{{ site.google_analytics.account }}']);
+                _gaq.push(['_trackPageview']);
+                _gaq.push(['_trackPageLoadTime']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            </script>
+        {% endif %}
+    </head>
+    <body>
+        <div id="wrapper">
+            <header role="banner">
+                <div id="site-title"><a href="/">{{ site.title }}</a></div>
+                <div id="site-description">{{ site.description }}</div>
+            </header>
+            <div id="content">
+                <a href="/contact">Nous contacter</a>
+            </div>
+            <div id="content">
+                {{ content }}
+            </div>
+            <div id="footer">
+                <div id="col-right">
+                    <p>Powered by <a href="http://jekyllrb.com/" title="Jekyll official website">Jekyll</a></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
